@@ -1,0 +1,11 @@
+{
+  "name": "gulp-template",
+  "version": "1.0.0",
+  "description": "Start boilerplate for static markup",
+  "main": "index.js",
+  "author": "Smirnova",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
