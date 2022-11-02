@@ -6,3 +6,9 @@ const productionMode = 'production';
 
 export const isProdMode = env === productionMode;
 
+export const paths = {
+  views: {
+    src: `./${srcDir}/pages/*.pug`,
+    dist: buildDir
+  }
+};
