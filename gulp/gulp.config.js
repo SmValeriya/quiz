@@ -6,9 +6,19 @@ const productionMode = 'production';
 
 export const isProdMode = env === productionMode;
 
+export const browserSyncOptions = {
+  server: {
+    baseDir: `./${buildDir}`
+  },
+  open: false,
+  notify: false,
+  cors: true
+};
+
 export const paths = {
   views: {
     src: `./${srcDir}/pages/*.pug`,
-    dist: buildDir
+    dist: buildDir,
+    watch: `./${srcDir}/pages/**/*.pug`
   }
 };
