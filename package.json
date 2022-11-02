@@ -3,9 +3,28 @@
   "version": "1.0.0",
   "description": "Start boilerplate for static markup",
   "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gulp": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "keywords": [
+    "gulp",
+    "pug",
+    "postcss"
+  ],
   "author": "Smirnova",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/register": "^7.18.9",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-rm": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.20.0"
   }
 }
