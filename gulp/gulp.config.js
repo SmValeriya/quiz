@@ -6,6 +6,14 @@ const productionMode = 'production';
 
 export const isProdMode = env === productionMode;
 
+export const revManifest = {
+  path: `${buildDir}/rev-manifest.json`,
+  options: {
+    base: `./${buildDir}`,
+    merge: true
+  }
+};
+
 export const browserSyncOptions = {
   server: {
     baseDir: `./${buildDir}`
@@ -20,5 +28,10 @@ export const paths = {
     src: `./${srcDir}/pages/*.pug`,
     dist: buildDir,
     watch: `./${srcDir}/pages/**/*.pug`
+  },
+  styles: {
+    src: `./${srcDir}/styles/*.pcss`,
+    dist: `./${buildDir}/styles/`,
+    watch: `./${srcDir}/styles/**/*.pcss`
   }
 };

@@ -6,15 +6,26 @@
   "disallowIdAttributeWithStaticValue": true,
   "disallowLegacyMixinCall": true,
   "disallowMultipleLineBreaks": true,
-  "disallowSpaceAfterCodeOperator": [ "-" ],
+  "disallowSpaceAfterCodeOperator": [
+    "-"
+  ],
   "disallowSpacesInsideAttributeBrackets": true,
   "requireClassLiteralsBeforeAttributes": true,
   "requireLowerCaseAttributes": true,
   "requireLowerCaseTags": true,
-  "requireSpecificAttributes": [ { "img": [ "alt" ] } ],
+  "requireSpecificAttributes": [
+    {
+      "img": [
+        "alt"
+      ]
+    }
+  ],
   "requireStrictEqualityOperators": true,
   "validateAttributeQuoteMarks": "\"",
-  "validateAttributeSeparator": { "separator": " ", "multiLineSeparator": "\n " },
+  "validateAttributeSeparator": {
+    "separator": " ",
+    "multiLineSeparator": "\n "
+  },
   "validateExtensions": true,
   "validateIndentation": 2,
   "validateLineBreaks": "LF"
