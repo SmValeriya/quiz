@@ -7,6 +7,7 @@ export const serve = (done) => {
   bs.init(browserSyncOptions);
   gulp.watch(paths.views.watch, gulp.series('views', reload));
   gulp.watch(paths.styles.watch, gulp.series('styles', reload));
+  gulp.watch(paths.scripts.watch, gulp.series('scripts', reload));
 
   return done();
 };

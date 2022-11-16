@@ -34,6 +34,11 @@ export const paths = {
     dist: `./${buildDir}/styles/`,
     watch: `./${srcDir}/styles/**/*.pcss`
   },
+  scripts: {
+    src: `./${srcDir}/scripts/*.js`,
+    dist: `./${buildDir}/scripts/`,
+    watch: `./${srcDir}/scripts/**/*.js`
+  },
   fonts: {
     src: `./${srcDir}/fonts/**/*.{woff,woff2}`,
     dist: `./${buildDir}/fonts/`,
