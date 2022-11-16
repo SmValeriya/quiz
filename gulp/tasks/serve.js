@@ -8,6 +8,7 @@ export const serve = (done) => {
   gulp.watch(paths.views.watch, gulp.series('views', reload));
   gulp.watch(paths.styles.watch, gulp.series('styles', reload));
   gulp.watch(paths.scripts.watch, gulp.series('scripts', reload));
+  gulp.watch(paths.fonts.watch, gulp.series('fonts', reload));
 
   return done();
 };
