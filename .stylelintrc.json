@@ -9,6 +9,14 @@
           "mixin"
         ]
       }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "/^svg-/"
+        ]
+      }
     ]
   }
 }

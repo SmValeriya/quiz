@@ -9,12 +9,16 @@ block content
     include includes/index/banner.pug
     hr
     p paragraph
+    img(src="./images/lisjata1.webp" alt="Fox")
     ul.items
       each val in team
         li= val
-    div.navbar
+    div.navbar.add-svg-css
       h1.navbar__title This is my nav
       ul
         each val in ["Home", "About"]
           li.navbar__button
             a(href="#")= val
+    svg
+      use(href="./images/sprite.svg#sun" fill="blue")
+    img(src="./images/owl.svg" alt="Owl")

@@ -6,6 +6,33 @@ const productionMode = 'production';
 
 export const isProdMode = env === productionMode;
 
+export const svgoPlugins = [
+  {
+    name: 'cleanupListOfValues',
+    params: { floatPrecision: 0 }
+  },
+  {
+    name: 'removeAttrs',
+    params: { attrs: 'style|data.*' }
+  },
+  {
+    name: 'removeDimensions',
+    active: true
+  },
+];
+
+export const svgoPluginsSprite = [...svgoPlugins];
+
+svgoPluginsSprite.push({
+  name: 'removeAttributesBySelector',
+  params: {
+    selectors: [
+      { selector: ':not([fill="none"])', attributes: ['fill'] },
+      { selector: '*', attributes: ['stroke'], }
+    ]
+  },
+});
+
 export const revManifest = {
   path: `${buildDir}/rev-manifest.json`,
   options: {
@@ -39,9 +66,30 @@ export const paths = {
     dist: `./${buildDir}/scripts/`,
     watch: `./${srcDir}/scripts/**/*.js`
   },
+  images: {
+    src: [
+      `./${srcDir}/images/**/*.{jpg,jpeg,png,gif,tiff,webp}`,
+      `!./${srcDir}/images/favicon/*.{jpg,jpeg,png,gif,tiff}`
+    ],
+    dist: `./${buildDir}/images/`,
+    watch: `./${srcDir}/images/**/*.{jpg,jpeg,png,gif,tiff}`
+  },
+  svg: {
+    src: [
+      `./${srcDir}/images/**/*.svg`,
+      `!./${srcDir}/images/icons/*.svg`
+    ],
+    dist: `./${buildDir}/images/`,
+    watch: `./${srcDir}/images/**/*.svg`
+  },
+  sprite: {
+    src: `./${srcDir}/images/icons/*.svg`,
+    dist: `./${buildDir}/images/`,
+    watch: `./${srcDir}/images/icons/*.svg`
+  },
   fonts: {
     src: `./${srcDir}/fonts/**/*.{woff,woff2}`,
     dist: `./${buildDir}/fonts/`,
     watch: `./${srcDir}/fonts/**/*.{woff,woff2}`
-  },
+  }
 };
