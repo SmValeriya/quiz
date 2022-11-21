@@ -16,6 +16,10 @@
     "test": "yarn pugLint && yarn styleLint && yarn eslint",
     "postinstall": "husky install"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmValeriya/gulp-template.git"
+  },
   "keywords": [
     "gulp",
     "pug",
@@ -23,6 +27,10 @@
   ],
   "author": "Smirnova",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmValeriya/gulp-template/issues"
+  },
+  "homepage": "https://github.com/SmValeriya/gulp-template#readme",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/plugin-transform-runtime": "^7.19.6",
