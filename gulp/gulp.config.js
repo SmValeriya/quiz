@@ -91,5 +91,9 @@ export const paths = {
     src: `./${srcDir}/fonts/**/*.{woff,woff2}`,
     dist: `./${buildDir}/fonts/`,
     watch: `./${srcDir}/fonts/**/*.{woff,woff2}`
+  },
+  favicon: {
+    src: `./${srcDir}/images/favicon/*.{jpg,jpeg,png,gif}`,
+    dist: `./${buildDir}/images/favicon/`,
   }
 };
