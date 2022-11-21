@@ -4,7 +4,7 @@
   "description": "Start boilerplate for static markup",
   "main": "index.js",
   "type": "module",
-  "private": true,
+  "private": false,
   "scripts": {
     "gulp": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=production gulp build",
@@ -14,7 +14,9 @@
     "eslint": "eslint \"./src/scripts/**/*.js\"",
     "eslintFix": "eslint \"./src/scripts/**/*.js\" --fix",
     "test": "yarn pugLint && yarn styleLint && yarn eslint",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "repository": {
     "type": "git",
@@ -65,6 +67,7 @@
     "gulp-svgo": "^2.2.1",
     "gulp-webp": "^4.0.1",
     "husky": "^8.0.2",
+    "pinst": "^3.0.0",
     "postcss": "^8.4.19",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-easy-import": "^4.0.0",
