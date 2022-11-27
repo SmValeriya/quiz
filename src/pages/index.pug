@@ -4,21 +4,19 @@ block variables
   -var page = 'index'
 
 block content
-  main.main
-    h2 Title
-    include includes/index/banner.pug
-    hr
-    p paragraph
-    img(src="./images/lisjata1.webp" alt="Fox")
-    ul.items
-      each val in team
-        li= val
-    div.navbar.add-svg-css
-      h1.navbar__title This is my nav
-      ul
-        each val in ["Home", "About"]
-          li.navbar__button
-            a(href="#")= val
-    svg
-      use(href="./images/sprite.svg#sun" fill="blue")
-    img(src="./images/owl.svg" alt="Owl")
+  .intro.py-3.bg-white.text-center
+    .container 
+      h2.text-primary.display-3.my-4 Ninja Quiz 
+  .quiz.py-4.bg-primary 
+    .container 
+      h2.my-5.text-white On with the questions...
+      form.quiz-form.text-light
+        each question in questions
+          .my-5 
+            p.lead.font-weight-normal= question.text
+            each answer, key in question.answers
+              .form-check.my-2.text-white-50 
+                input(type="radio" name=question.id value=key)
+                label.form-check-label= answer
+        .text-center
+          input.btn.btn-light(type="submit")
